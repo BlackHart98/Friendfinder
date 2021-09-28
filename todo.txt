@@ -4,6 +4,7 @@ completed task are prefixed with [*]
 [] In the testcase folder create a testcase.py file.
 [] In the testcase.py file write a python code to generate dummy_friend_list.csv
 file.
+[] Push into the in-progress branch
 
 
 The csv file is of the format
@@ -27,4 +28,4 @@ input constraints
 friend_1 =/= friend_2
 
 
-if any question arises please contact me 
+if any question arises please contact me
