@@ -1,0 +1,30 @@
+The tasks are listed below, incompleted or unattempted tasks are prefixed with []
+completed task are prefixed with [*]
+[] Create a testcase folder.
+[] In the testcase folder create a testcase.py file.
+[] In the testcase.py file write a python code to generate dummy_friend_list.csv
+file.
+
+
+The csv file is of the format
+
+user_id, list_size
+list_id,friend_1,friend_2
+
+Sample csv
+1
+1,1,2
+2,2,3
+3,4,5
+4,5,6
+
+
+input constraints
+1 <= user_id <= 100000
+1 <= list_size <= 100000
+1 <= list_id <= 100000
+1 <= friend_1,friend_2 <= 100000
+friend_1 =/= friend_2
+
+
+if any question arises please contact me 
