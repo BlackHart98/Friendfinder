@@ -4,6 +4,7 @@
 The Friendfinder module uses (but would not be limited to) the fixed stopping distance breadth first search. A sample code implementation is listed below:
 
 ```python
+import Friendfinder as ff
 if __name__ == "__main__":
     data = """1
 1,1,2
