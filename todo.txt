@@ -29,3 +29,9 @@ friend_1 =/= friend_2
 
 
 if any question arises please contact me
+
+
+[*] Create a Friendfinder folder.
+[*] In the Friendfinder folder create an __init__.py file
+[*] In the __init__.py file create a Friendfinder class
+[] Push to the in-progress branch.

@@ -1,9 +1,34 @@
-# Friendfinder
- A simple friend finding module
+import Friendfinder as ff
 
-The Friendfinder module uses (but would not be limited to) the fixed stopping distance breadth first search. A sample code implementation is listed below:
+def fixedStoppingDistanceBFS(start,distance,graph):
+    result = []
+    parent = {start : -1}
+    queue = [start]
+    visited = set()
+    visited.add(start)
+    level = {start : 0}
+    i = 1
+    while queue:
+        next = []
+        for u in queue:
+            if i > distance+1:
+                 break
+            for v in graph[u]:
+                if v not in visited:
+                    visited.add(v)
+                    level[v] = i
+                    parent[v] = u
+                    next.append(v)
+        queue = next
+        if i > distance+1:
+            break
+        i += 1
+    for element in level:
+        if level[element] > 1:
+            result.append(element)
+    return result
 
-```python
+
 if __name__ == "__main__":
     data = """1
 1,1,2
@@ -14,6 +39,8 @@ if __name__ == "__main__":
 6,5,6
 7,6,7
     """
+    # file_handle = open("testcase/dummy_friend_list.csv","r")
+    # data = file_handle.read()
     data_prime = data.split()
 
     data_size = len(data_prime)
@@ -42,4 +69,3 @@ if __name__ == "__main__":
 
     result = friend_finder_obj.findSuggestedFriendList(root_id,friendgraph)
     print(result)
-```
