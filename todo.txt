@@ -1,10 +1,10 @@
 The tasks are listed below, incompleted or unattempted tasks are prefixed with []
 completed task are prefixed with [*]
-[] Create a testcase folder.
-[] In the testcase folder create a testcase.py file.
-[] In the testcase.py file write a python code to generate dummy_friend_list.csv
+[*] Create a testcase folder.
+[*] In the testcase folder create a testcase.py file.
+[*] In the testcase.py file write a python code to generate dummy_friend_list.csv
 file.
-[] Push into the in-progress branch
+[*] Push into the in-progress branch
 
 
 The csv file is of the format
@@ -13,7 +13,7 @@ user_id, list_size
 list_id,friend_1,friend_2
 
 Sample csv
-1
+1,4
 1,1,2
 2,2,3
 3,4,5

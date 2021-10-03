@@ -38,3 +38,27 @@ class Friendfinder:
             if level[element] > 1:
                 result.append(element)
         return result
+
+
+    def mutualFriend(self,root_id,suggested_friend_list,graph):
+        mutual_friend = {}
+        temp_root = graph[root_id]
+        temp_root.sort()
+        for element in suggested_friend_list:
+            mutual_friend[element] = []
+            if element in graph:
+                temp_dest = graph[element]
+                temp_dest.sort()
+                i = j = 0
+                while i < len(temp_root) and j < len(temp_dest):
+                    if temp_root[i] == temp_dest[j]:
+                        mutual_friend[element].append(temp_root[i])
+                        i += 1
+                        j += 1
+                    elif temp_root[i] < temp_dest[j]:
+                        i += 1
+                    else:
+                        j += 1
+            else:
+                continue
+        return mutual_friend

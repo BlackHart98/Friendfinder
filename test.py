@@ -1,50 +1,22 @@
-import Friendfinder as ff
-
-def fixedStoppingDistanceBFS(start,distance,graph):
-    result = []
-    parent = {start : -1}
-    queue = [start]
-    visited = set()
-    visited.add(start)
-    level = {start : 0}
-    i = 1
-    while queue:
-        next = []
-        for u in queue:
-            if i > distance+1:
-                 break
-            for v in graph[u]:
-                if v not in visited:
-                    visited.add(v)
-                    level[v] = i
-                    parent[v] = u
-                    next.append(v)
-        queue = next
-        if i > distance+1:
-            break
-        i += 1
-    for element in level:
-        if level[element] > 1:
-            result.append(element)
-    return result
+import Friendfinder as ff                             
 
 
 if __name__ == "__main__":
-    data = """1
-1,1,2
-2,2,3
-3,4,5
-4,5,1
-5,3,8
-6,5,6
-7,6,7
-    """
-    # file_handle = open("testcase/dummy_friend_list.csv","r")
-    # data = file_handle.read()
+#     data = """1
+# 1,1,2
+# 2,2,3
+# 3,4,5
+# 4,5,1
+# 5,3,8
+# 6,5,6
+# 7,6,7
+#     """
+    file_handle = open("testcase/dummy_friend_list.csv","r")
+    data = file_handle.read()
     data_prime = data.split()
 
     data_size = len(data_prime)
-    root_id = int(data_prime[0])
+    root_id = int((data_prime[0].split(","))[0])
     friendgraph = {}
     i = 1
     while i < data_size:
@@ -69,3 +41,6 @@ if __name__ == "__main__":
 
     result = friend_finder_obj.findSuggestedFriendList(root_id,friendgraph)
     print(result)
+
+    mutual_friend = friend_finder_obj.mutualFriend(root_id,result,friendgraph)
+    print(mutual_friend)
