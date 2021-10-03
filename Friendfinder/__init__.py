@@ -1,6 +1,3 @@
-
-
-
 class Friendfinder:
     friend_of_friends_depth = 0
     data_type = int

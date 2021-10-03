@@ -1,4 +1,4 @@
-import Friendfinder as ff                             
+import Friendfinder as ff
 
 
 if __name__ == "__main__":
@@ -32,7 +32,7 @@ if __name__ == "__main__":
             friendgraph[temp[2]] = [temp[1]]
         else:
             friendgraph[temp[1]] = [temp[2]]
-            friendgraph[temp[2]] = [temp[1]]
+            # friendgraph[temp[2]] = [temp[1]]
         i += 1
 
     print(friendgraph)
