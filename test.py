@@ -23,13 +23,13 @@ if __name__ == "__main__":
         temp = [int(x) for x in data_prime[i].split(",")]
         if (temp[1] in friendgraph) and (temp[2] in friendgraph):
             friendgraph[temp[1]].append(temp[2])
-            friendgraph[temp[2]].append(temp[1])
+            # friendgraph[temp[2]].append(temp[1])
         elif temp[1] in friendgraph:
             friendgraph[temp[1]].append(temp[2])
-            friendgraph[temp[2]] = [temp[1]]
+            # friendgraph[temp[2]] = [temp[1]]
         elif temp[2] in friendgraph:
             friendgraph[temp[1]] = [temp[2]]
-            friendgraph[temp[2]] = [temp[1]]
+            # friendgraph[temp[2]] = [temp[1]]
         else:
             friendgraph[temp[1]] = [temp[2]]
             # friendgraph[temp[2]] = [temp[1]]
